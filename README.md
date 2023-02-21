@@ -157,7 +157,7 @@ Tips：
    - vuex包含，state(状态),mutations(同步操作 commit),actions(异步操作,通常异步操作同步 dispatch)三部分, 要引入配置好后导出store，再给appuse
 3. 目前项目用到的技术：vue3 vueRouter  vuex  mixin  组合式函数 
 4. 学习happyfri项目---vue2+vuex，基本摸透了逻辑交互
-
+5. 第一次提交项目到github
 Tips:
 1. 服务端渲染和客户端渲染最本质的区别就是由谁来完成html的拼接
    - 服务端渲染SSR是在服务端生成DOM树，开发效率低，增大服务器压力，但有多个页面，有利于SEO
