@@ -155,10 +155,19 @@ Tips：
 2. 对本项目引入 mixins混入 和 vuex全局状态管理，
    - mixins一般较少使用，就是一个包含组件配置项的对象，import引入后，记得添加配置项:mixins: [myMixins],然后与当前组件选项自动合并
    - vuex包含，state(状态),mutations(同步操作 commit),actions(异步操作,通常异步操作同步 dispatch)三部分, 要引入配置好后导出store，再给appuse
-3. 目前项目用到的技术：vue3 vueRouter  vuex  mixin  组合式函数 
+3. 目前项目用到的技术：vue3 vueRouter  vuex  mixin  antdv  组合式函数 
 4. 学习happyfri项目---vue2+vuex，基本摸透了逻辑交互
 5. 第一次提交项目到github
 Tips:
 1. 服务端渲染和客户端渲染最本质的区别就是由谁来完成html的拼接
    - 服务端渲染SSR是在服务端生成DOM树，开发效率低，增大服务器压力，但有多个页面，有利于SEO
    - 客户端渲染CSR是在客户端生成DOM树，有利于前后端分离，但是首屏加载慢，而且不利于SEO，因为是SPA，只有一个页面
+
+
+`2023-2-22:`
+
+1. antdv    
+   - 全部引入（将组件库所有组件全部引入，单独引入全部样式，打包体积很大） app.use(Antd)
+   - 全局部分引入（是指在根组件注册全局组件，以后在子组件可以直接使用） app.use(Button)
+   - 局部引入（在组件中局部注册，用哪个引入哪个，）  import { Button as AButton } from 'ant-design-vue'
+   - 按需加载  引入babel-plugin-import，实现按需加载  import { Button as AButton } from 'ant-design-vue';

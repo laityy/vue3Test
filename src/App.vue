@@ -26,7 +26,6 @@ import TabBar from 'components/common/TabBar/TabBar.vue'
 //         // console.log(this);
 //         // console.log(this.$router);
 //         // console.log(this.$data);
-
 //     }
 // }
 </script>
