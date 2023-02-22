@@ -23,7 +23,7 @@ npm list vue 查看当前项目vue版本
 
 
 
-tips： 
+tips:
 注意vue3中roter的引入和配置
 
 history: createWebHistory(), //createWebHistory实现history模式实现，
@@ -43,7 +43,7 @@ alt+左键，选中多行同时编写
 1. 使用vue3的Composition组合式API对todolist代码重构，修改了Item Items ItemList组件
 
 2. 在`<script setup>`中，无法访问`this`，options API中在setup()中没有`this`，但是其他配置项（生命周期钩子中）可以访问`this`
-   
+
 - 定义的数据使用ref或reactive定义后，直接使用即可
 
 - 组件在`<script setup>`中无需注册，直接使用
@@ -56,8 +56,8 @@ alt+左键，选中多行同时编写
 
 - 使用生命周期函数：
   - 从vue中引入勾子函数，想computed一样，传入一个函数
-  -  `import onMounted from 'vue'`
-  -  `onMounted(()=>{console.log('onMounted')})`
+  - `import onMounted from 'vue'`
+  - `onMounted(()=>{console.log('onMounted')})`
 
 `2023-2-9:`
 
@@ -67,6 +67,7 @@ alt+左键，选中多行同时编写
 
 
 Tips：
+
 - v-on:click="methodName(param1)" 等同于 @click="handler('hi')"  注意：v-on传入的是字符串，要用""包裹，参数也在""里面
 - @methodName="$emit('dirEvent',[...params])"
 - hooks文件夹，存放组合式函数，将组件的一些共同功能抽离成一个单独的js文件
@@ -113,11 +114,11 @@ npm run dev是在vue-cli2.0中使用         "dev": "webpack-dev-server --inline
 npm run serve是在vue-cli3.0中使用       "serve": "vue-cli-service serve",
 本质上是不同版本脚手架启动项目的脚本
 不能直接运行vue-cli-service，但是在npm run的时候，会前往node_modules/.bin下找到vue-cli-service文件，然后将该文件作为脚本运行。
+
 ```vue
 <script setup>
 里面是无法访问this的，this始终为undefined
 </script>
-
 <script>
 export default{
     setup(){
@@ -132,10 +133,11 @@ export default{
 }
 </script>
 ```
+
 this在setup内是undefined
 
-
 `2023-2-13:`
+
 1. 在声明匿名函数时名称可以省略。函数名称只是函数体中的一个本地变量。即name属性
 
 
@@ -171,3 +173,17 @@ Tips:
    - 全局部分引入（是指在根组件注册全局组件，以后在子组件可以直接使用） app.use(Button)
    - 局部引入（在组件中局部注册，用哪个引入哪个，）  import { Button as AButton } from 'ant-design-vue'
    - 按需加载  引入babel-plugin-import，实现按需加载  import { Button as AButton } from 'ant-design-vue';
+
+2. 对象的原型指向其构造函数的原型对象
+```js
+function A(){}
+let a = new A()
+a.__proto__ === a.constructor.prototype    //true
+// __proto__  称为原型 ，存在于对象，但js一切皆对象，因此函数对象都有__proto__
+// prototype  称为原型对象  只有函数才有prototype
+
+
+class P{}
+typeof A //'function'
+typeof P //'function'
+```
