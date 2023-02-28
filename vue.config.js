@@ -32,6 +32,7 @@ module.exports = {
     //     https://www.foobar.com/my-app/
     // webpack-dev-server 相关配置
     devServer: {
+        proxy: 'https://api.github.com/users', //设置代理地址
         open: false, //构建完成自动打开网页，等同package.json中的--open
         host: '0.0.0.0', //默认是 0.0.0.0: '0.0.0.0'，表示为本机ip地址，设置之后外部服务器可以通过该ip访问web服务器，localhost和0.0.0.0都是表示本地主机ip
         port: 8080, //设置端口号
