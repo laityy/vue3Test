@@ -1,4 +1,3 @@
-
 `2023-2-3:`
 尝试vue3做的todolist案例
 1. 列表通过v-for遍历数据数组生成，该数组位于App组件，通过props传入Items完成遍历
@@ -142,7 +141,6 @@ this在setup内是undefined
 
 
 `2023-2-19:`
-
 Tips：
 - vue官网是用vuepress框架写的
 - vue事件绑定 ()可写可不写，都是给元素绑定一个事件         **官网：**  ` v-on 也可以接受一个方法名或对某个方法的调用。`
@@ -187,3 +185,13 @@ class P{}
 typeof A //'function'
 typeof P //'function'
 ```
+
+`2023-2-22:`
+
+function qqq(){
+    return (function(){
+        return function(){return 12}()
+    })()
+}
+qqq() //12
+函数的返回值有递归性，上面的嵌套三层函数，返回值为12

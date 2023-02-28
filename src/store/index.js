@@ -9,6 +9,8 @@ const store = createStore({
     actions,
     mutations,
 })
-console.log(store) //store对象包含commit，dispatch方法，还有state属性-用于保存状态
+// console.log('store对象：',store) //store对象包含commit，dispatch方法，还有state属性-用于保存状态
 
 export default store
+
+//提交(commit)mutation，分发(dispatch)action

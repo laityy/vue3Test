@@ -12,8 +12,8 @@ import store from './store'
 // console.log('App:', App)
 const app = createApp(App)
 // console.log('antd', Antd)
-console.log(app)
-console.log(store) //Store对象
+// console.log('app:',app)
+// console.log('store:',store) //Store对象
 console.log(app.version) //查看当前应用vue版本信息，可用于插件适配时作判断
 
 app.use(router).use(store).mount('#app')
