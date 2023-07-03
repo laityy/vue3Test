@@ -19,3 +19,5 @@ console.log(app.version); //查看当前应用vue版本信息，可用于插件�
 app.use(router).use(store).mount('#app');
 
 console.log('test1');
+
+console.log('test2');
