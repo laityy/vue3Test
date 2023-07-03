@@ -30,7 +30,7 @@ export default {
     }
 }
 </script> -->
-<!-- <script setup>
+<script setup>
 import { computed, ref } from 'vue'
 import { useStore } from 'vuex'
 
@@ -44,9 +44,9 @@ const search = computed(() => store.state.search)
 //从计算属性返回的值是派生状态，源状态变化，派生状态才变化，
 //修改派生状态是无意义的，因此计算属性应当只读，并且永远不应该被更改——应该更新它所依赖的源状态以触发新的计算。
 const getMsg = (name) => store.dispatch('getMsg', name)
-</script> -->
+</script>
 
-<script>
+<!-- <script>
 import { computed, ref } from 'vue'
 import { useStore } from 'vuex'
 export default {
@@ -70,8 +70,7 @@ export default {
     }
   }
 }
-
-</script>
+</script> -->
 
 
 
