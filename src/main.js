@@ -7,7 +7,6 @@ import store from './store';
 //#region
 //crateApp传入的是根组件，mount手动挂载上dom上
 //#endregion
-console.log(111);
 // console.log('create:', createApp(App))
 // console.log('App:', App)
 const app = createApp(App);
@@ -16,3 +15,4 @@ const app = createApp(App);
 // console.log('store:',store) //Store对象
 console.log(app.version); //查看当前应用vue版本信息，可用于插件适配时作判断
 app.use(router).use(store).mount('#app');
+console.log(111);
